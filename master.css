@@ -1,0 +1,219 @@
+* {
+    box-sizing: border-box;
+    /* scroll-behavior: smooth; */
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* *,
+*:before,
+*:after {
+    box-sizing: inherit;
+} */
+
+/* body {
+    background-color: #99a10050;
+    background-color: #00030050;
+    background-image: linear-gradient(to right, #01022d, #000);
+    background: linear-gradient(to right, #000004e5, #06040478 30%),url(image/pexels-adria-masi-461420600-27962178.jpg) ;
+    background-color: #dad3f8;
+    /* background: linear-gradient(#111, #222); */
+/* background-image: linear-gradient(to left, #dfdf68, #d5d8); */
+/* } */
+
+
+:root {
+    --moderate-violet: hsl(263, 55%, 52%);
+    --very1-dark-grayish-blue: hsl(217, 19%, 35%);
+    --very2-dark-grayish-blue: hsl(217, 29%, 14%);
+    --white: hsl(0, 0%, 100%);
+    --light-gray: hsl(0, 0%, 81%);
+    --light-gray-blue12: hsl(210, 46%, 95%);
+    /* background: #f7f7f7; */
+}
+
+
+/* body {
+    background-color: var(--moderate-violet);
+    /* background: #ae445a; */
+ /* }  */
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+body::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #ff676d;
+    z-index: -1;
+    clip-path: inset(47% 0 0 0);
+
+}
+
+
+.container {
+    max-width: 950px;
+    overflow: hidden;
+    width: 100%;
+    padding: 80px 0;
+}
+
+.container .main-card {
+    width: 200%;
+    display: flex;
+    justify-content: space-evenly;
+    transition: .3s
+}
+
+#two:checked~.main-card {
+    margin-left: -100%;
+}
+
+
+.main-card .cards {
+    width: calc(100% / 2 - 10px);
+    display: flex;
+    justify-content: space-between;
+    margin: 0 20px;
+
+}
+
+.main-card .cards .card {
+    background: #fff;
+    width: calc(100% / 3 - 10px);
+    padding: 30px;
+    border-radius: 24px;
+    transition: .3s;
+}
+
+.main-card .cards .card:hover {
+    transform: translateY(-15px);
+}
+.cards .card .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+
+.cards .card .content .img {
+    height: 130px;
+    width: 130px;
+    margin-bottom: 14px;
+    background: #ff676d;
+    border-radius: 50%;
+    padding: 3px;
+}
+
+.cards .card .content .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #fff;
+}
+
+.card .content .dedails .name {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.card .content .dedails .job {
+    font-size: 20px;
+    color: #ff676d;
+}
+
+.card .content .media-icon {
+    display: flex;
+    margin-top: 10px;
+}
+
+.card .content .media-icon a {
+    height: 35px;
+    width: 35px;
+    color: #fff;
+    background: #ff676d;
+    margin: 0 4px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 33px;
+    font-size: 14px;
+    border: 2px solid transparent;
+    transition: .3s;
+}
+
+.card .content .media-icon a:hover {
+    border-color: #ff676d;
+    color: #ff676d;
+    background: #fff;
+}
+
+
+.botton {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.botton label {
+    height: 15px;
+    width: 15px;
+    border-radius: 20px;
+    background: #fff;
+    margin: 0 4px;
+    transition: .3s
+}
+
+.botton label.active {
+    width: 35px;
+}
+
+
+
+
+#one:checked~.botton label.one {
+    width: 35px;
+}
+
+#two:checked~.botton label.two {
+    width: 35px;
+}
+
+#two:checked~.botton label.one {
+    width: 15px;
+}
+
+#one:checked~.botton label.two {
+    width: 15px;
+}
+
+
+input[type="radio"]{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
